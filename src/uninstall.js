@@ -16,7 +16,7 @@ module.exports = function install(config, args, callback) {
     process.exit(res.status);
   }
 
-  res = spawnSync('npm', ['uninstall', name], spawnOpts);
+  res = spawnSync('wnpm', ['uninstall', name], spawnOpts);
 
   if (res.status) {
     process.exit(res.status);

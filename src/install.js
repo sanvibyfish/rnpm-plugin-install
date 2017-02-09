@@ -10,7 +10,7 @@ log.heading = 'rnpm-install';
 module.exports = function install(config, args, callback) {
   const name = args[0];
 
-  var res = spawnSync('npm', ['install', name, '--save'], spawnOpts);
+  var res = spawnSync('wnpm', ['install', name, '--save'], spawnOpts);
 
   if (res.status) {
     process.exit(res.status);
